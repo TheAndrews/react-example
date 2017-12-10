@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #e6e6e6 !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.component-container .container {
+  margin-top: 50px;
+
+}
