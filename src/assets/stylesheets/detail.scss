@@ -1,0 +1,64 @@
+$text-color: #666;
+.detail {
+    margin-top: 5px !important;
+}
+
+.product-detail {
+    background-color: #ffffff;
+    display: flex;
+}
+
+.container .detail-description {
+    float: left;
+    padding: 10px;
+    width: 69%;
+    margin-top: 10px;
+}
+
+.container .detail-description .description {
+    padding: 15px;
+}
+
+.container .detail-buy {
+    float: left;
+    width: 30%;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.container .detail-buy button {
+    background-color: #3483fa;
+    color: #ffffff;
+    border: 0px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.container .detail-buy label {
+    width: 100%;
+}
+
+.container .detail-buy .sold-info {
+    font-size: 18px;
+    font-weight: 100;
+    color: $text-color;
+}
+
+.container .detail-buy .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container .detail-buy .price {
+    font-size: 34px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.container .detail-description img {
+    margin-left: 100px;
+    width: 70%;
+}

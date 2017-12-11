@@ -21,7 +21,9 @@ class ProductController {
                         });
                     });
                 });
-                responseJson.results.forEach((result, i) => {
+
+                for(let i = 0; i < 4; i++) {
+                    const result = responseJson.results[i];
                     items.push({
                         id: result.id,
                         title: result.title,
@@ -35,7 +37,7 @@ class ProductController {
                         free_shipping: result.shipping.free_shipping,
                         state_name: result.address.state_name
                     });
-                });
+                }
 
                 const products = {
                     author: {
@@ -71,7 +73,6 @@ class ProductController {
                 return product;
             }));
         });
-
     }
 
     getProductDetail(id) {
@@ -135,7 +136,6 @@ class ProductController {
     }
 
     buildProduct(result, description, pics){
-
         let item = {
             id: result.id,
             title: result.title,

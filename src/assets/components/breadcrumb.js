@@ -3,7 +3,7 @@ import '../stylesheets/breadcrumb.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class Breadcrumb extends Component {
-    render() {  
+    render() {
         return (
             <div className="container">
                 <div className="container-breadcrumb">

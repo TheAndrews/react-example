@@ -1,22 +1,35 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "dompurify": "^1.0.3",
-    "express": "^4.16.2",
-    "morgan": "^1.9.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-router": "^3.2.0",
-    "react-scripts": "1.0.17"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "start:server": "node server",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+	"name": "my-app",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"bootstrap": "^3.3.7",
+		"dompurify": "^1.0.3",
+		"express": "^4.16.2",
+		"morgan": "^1.9.0",
+		"node-sass-chokidar": "0.0.3",
+		"npm-run-all": "^4.1.2",
+		"react": "^16.2.0",
+		"react-dom": "^16.2.0",
+		"react-router": "^3.2.0",
+		"react-scripts": "1.0.17"
+	},
+	"scripts": {
+		"build-css": "node-sass-chokidar src/ -o src/",
+		"watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+		"start-js": "react-scripts start",
+		"start": "npm-run-all -p watch-css start-js",
+		"start:server": "node server",
+		"build-js": "react-scripts build",
+		"build": "npm-run-all build-css build-js",
+		"test": "mocha src/test",
+		"eject": "react-scripts eject"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"mocha": "^4.0.1",
+		"mz": "^2.7.0",
+		"supertest": "^3.0.0",
+		"supertest-as-promised": "^4.0.2"
+	}
 }
